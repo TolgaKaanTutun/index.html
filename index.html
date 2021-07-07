@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Counter</title>
+<style type="text/css">
+#write {
+    border-style: solid;
+    width: 100px;
+    height: 100px;
+    font-size: 70px;
+    text-align: center;
+}
+</style>
+<script type="text/javascript">
+var counter=0;
+function Counter(){
+document.getElementById("write").textContent=counter+1;
+counter++;
+}
+
+function decrementer(){
+document.getElementById("write").textContent=counter-1;
+counter--;
+}
+
+
+function Increment(){
+
+Counter();
+}
+function Decrement(){
+
+
+decrementer();
+}
+function Reset(){
+
+counter=0;
+document.getElementById("write").textContent=counter;
+}
+
+
+
+</script>
+</head>
+<body>
+<div id="write"></div><br />
+<input id="btnIncrement" type="button" value="Increment>>" onclick="Increment();" />
+<input id="btnReset" type="button" value="Reset>>" onclick="Reset();" />
+<input id="btnDecrement" type="button" value="Decrement>>" onclick="Decrement();" />
+</body>
+</html>
